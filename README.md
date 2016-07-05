@@ -25,8 +25,13 @@ Solution
 
 1. Use original Finder windows and use one of the following to change
 
-A. keyboard shortcut remap app
+A. Applescript in Automator or Custom keyboard shortcuts of Finder menu items in System Preference
 
-B. Applescript in Automator
+Since there is no resident app installed, there will be some manual set up procedure to follow in order to get things in place. Please go to teh Wiki page of this site to see the procedure.
 
-C. Custom keyboard shortcuts of Finder menu items in System Preference
+B. keyboard shortcut remap app
+
+If you are willing to install (or happens to have) an app which has the ability to remap keyboard shortcut, it will be a lot easier. I will provide packages for the following apps:
+
+A. BetterTouchTool
+B. Alfred
