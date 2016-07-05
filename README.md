@@ -12,11 +12,11 @@ Goal: make Mac Finder act more like the Total Commander in Windows
 Background
 
 1. Total Commander (previously known as Windows Commander) does not have Mac version
-2. The alternative apps try to fulfill the vacancy using various approaches:
-2a. Plugin to Finder - XtraFinder & TotalFinder
-2b. Stand alone app - PathFinder, Double Commander and Commander One
+2. The alternative apps try to fulfill the vacancy using various approaches:\n
+2a. Plugin to Finder - XtraFinder & TotalFinder\n
+2b. Stand alone app - PathFinder, Double Commander and Commander One\n
 3. Reasons *not* to choose these solution:
-3a. Pricy
+3a. Pricy\n
 3b. Have another app running in addition to Finder, which is required for "select file" dialog 
 
 Solution
