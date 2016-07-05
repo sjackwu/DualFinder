@@ -25,7 +25,7 @@ Background
 
 2b. Stand alone app - PathFinder, Double Commander and Commander One
 
-Reasons *not* to choose these solution:
+3.Reasons *not* to choose these solution:
 
 3a. Pricy
 
