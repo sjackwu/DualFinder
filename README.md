@@ -1,7 +1,9 @@
 # DualFinder
 You don't need an app to have two-pane file management on Mac OS X
 
-Goal: make Mac Finder act more like the Total Commander in Windows
+Goal: 
+
+Make Mac Finder act more like the Total Commander in Windows
 	
 1. Ideally, free - use free apps and applescript/automator  (to Service menu) 
 2. Dual window mode - 2 windows side by side
@@ -20,8 +22,11 @@ Background
 3b. Have another app running in addition to Finder, which is required for "select file" dialog 
 
 Solution
+
 1. Use original Finder windows and use one of the following to change
 
-a. keyboard shortcut remap app
-b. Applescript in Automator
-c. Custom keyboard shortcuts of Finder menu items in System Preference
+A. keyboard shortcut remap app
+
+B. Applescript in Automator
+
+C. Custom keyboard shortcuts of Finder menu items in System Preference
