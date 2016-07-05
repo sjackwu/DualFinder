@@ -37,7 +37,7 @@ Solution
 
 A. Applescript in Automator or Custom keyboard shortcuts of Finder menu items in System Preference
 
-Since there is no resident app installed, there will be some manual set up procedure to follow in order to get things in place. Please go to teh Wiki page of this site to see the procedure.
+Since there is no resident app installed, there will be some manual set up procedure to follow in order to get things in place. Please go to teh Wiki page of this site (https://github.com/sjackwu/DualFinder/wiki) to see the procedure.
 
 B. keyboard shortcut remap app
 
