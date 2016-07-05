@@ -20,7 +20,8 @@ Background
 3b. Have another app running in addition to Finder, which is required for "select file" dialog 
 
 Solution
-	• Use original Finder and use one of the following to change 
-		a. keyboard shortcut remap app
-		b. Applescript in Automator
-		c. Custom keyboard shortcuts of Finder menu items in System Preference
+1. Use original Finder windows and use one of the following to change
+
+a. keyboard shortcut remap app
+b. Applescript in Automator
+c. Custom keyboard shortcuts of Finder menu items in System Preference
