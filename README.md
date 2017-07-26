@@ -1,7 +1,7 @@
 # DualFinder
 You don't need an app to have two-pane file management on Mac OS X
 
-Goal: 
+##Goal
 
 Make Mac Finder act more like the Total Commander in Windows
 	
@@ -15,7 +15,7 @@ Make Mac Finder act more like the Total Commander in Windows
 
 5. (Ideally) No resident app
 
-Background
+##Background
 
 1. Total Commander (previously known as Windows Commander) does not have Mac version
 
@@ -29,7 +29,7 @@ Background
     * Pricy
     * Have another app running in addition to Finder, which is required for "select file" dialog 
 
-Solution
+##Solution
 
 Use original Finder windows and use one of the following to change
 
