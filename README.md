@@ -52,3 +52,8 @@ Here are the steps I would do:
 2. BetterTouchTool version
 3. Applescript version
 4. Procedure to set up app-less version (w/ Automator & the Service menu)
+
+##Help Needed
+
+1. An icon to represent this project
+2. After the "app-less" version is completed, I may work on an installer to automate the process.
