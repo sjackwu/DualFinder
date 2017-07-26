@@ -21,15 +21,13 @@ Background
 
 2. The alternative apps try to fulfill the vacancy using various approaches:
 
-  1. Plugin to Finder - XtraFinder & TotalFinder
-
-  2. Stand alone app - PathFinder, Double Commander and Commander One
+    * Plugin to Finder - XtraFinder & TotalFinder
+    * Stand alone app - PathFinder, Double Commander and Commander One
 
 3.Reasons *not* to choose these solution:
 
-  1. Pricy
-
-  2. Have another app running in addition to Finder, which is required for "select file" dialog 
+    * Pricy
+    * Have another app running in addition to Finder, which is required for "select file" dialog 
 
 Solution
 
@@ -43,6 +41,5 @@ Since there is no resident app installed, there will be some manual set up proce
 
 If you are willing to install (or happens to have) an app which has the ability to remap keyboard shortcut, it will be a lot easier. I will provide packages for the following apps:
 
-  1. BetterTouchTool
-
-  2. Alfred
+    * BetterTouchTool
+    * Alfred
