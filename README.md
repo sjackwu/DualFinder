@@ -53,6 +53,14 @@ Here are the steps I would do:
 3. Applescript version
 4. Procedure to set up app-less version (w/ Automator & the Service menu)
 
+##Credit
+
+The project is actually a collection of codes I found on the Internet, and of course sometimes I modify the codes to fit me needs. I will list the source of codes as much as I can. Here are some of the sources that I can remember:
+
+###DualFinder
+1. Two Finders Side-by-Side https://copiancestral.wordpress.com/2012/03/24/two-finders-side-by-side/
+
+
 ##Help Needed
 
 1. An icon to represent this project
