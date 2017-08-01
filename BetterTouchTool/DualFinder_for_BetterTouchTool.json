@@ -1,0 +1,334 @@
+{
+  "BTTPresetName" : "bettertouchtool20170410_10AE9474-E14B-48D6-B33F-132DA8A9FD6A",
+  "BTTPresetUUID" : "48BDE834-AF87-4A7B-AF16-140AAF07AE68",
+  "BTTPresetContent" : [
+    {
+      "BTTAppBundleIdentifier" : "com.apple.finder",
+      "BTTAppName" : "Finder",
+      "BTTAppSpecificSettings" : {
+
+      },
+      "BTTTriggers" : [
+        {
+          "BTTGestureNotes" : "Rename",
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 124,
+          "BTTPredefinedActionName" : "Trigger Menubar Menu-Item",
+          "BTTMenubarPath" : "(3);(11)",
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 97,
+          "BTTShortcutModifierKeys" : 131072,
+          "BTTOrder" : 17
+        },
+        {
+          "BTTGestureNotes" : "Copy full path",
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTShortcutToSend" : "58,55,8",
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 96,
+          "BTTShortcutModifierKeys" : 131072,
+          "BTTOrder" : 7,
+          "BTTAdditionalActions" : [
+            {
+              "BTTTriggerType" : -1,
+              "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+              "BTTPredefinedActionType" : 172,
+              "BTTPredefinedActionName" : "Run Apple Script (enter directly as text)",
+              "BTTInlineAppleScript" : "display notification (the clipboard as text) with title \"File\/folder path copied\"",
+              "BTTEnabled" : 1,
+              "BTTShortcutKeyCode" : -1,
+              "BTTShortcutModifierKeys" : -1,
+              "BTTOrder" : 0
+            }
+          ],
+          "BTTTriggerConfig" : {
+            "BTTHUDDetailText" : "File path copied"
+          }
+        },
+        {
+          "BTTGestureNotes" : "jump to next tab",
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 172,
+          "BTTPredefinedActionName" : "Run Apple Script (enter directly as text)",
+          "BTTInlineAppleScript" : "tell application \"Finder\" to select the last Finder window",
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 48,
+          "BTTShortcutModifierKeys" : 0,
+          "BTTOrder" : 3
+        },
+        {
+          "BTTGestureNotes" : "copy file",
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 172,
+          "BTTPredefinedActionName" : "Run Apple Script (enter directly as text)",
+          "BTTInlineAppleScript" : "tell application \"Finder\"\r\tactivate\r\t-- get number of open finder windows\r\tset NumberofFinders to count every Finder window\r\t-- if number of finder window is not 2, stop\r\tif NumberofFinders is not 2 then\r\t\tdisplay dialog \"Please make sure only 2 Finder Windows are opened side-by-side.\" buttons {\"OK\"}\r\t\treturn\r\tend if\r\t-- if answer is Yes, do the copying\r\ttell application \"System Events\"\r\t\tkeystroke \"c\" using command down\r\t\tdelay 0.5\r\t\ttell application \"Finder\" to select the last Finder window\r\t\tdelay 0.5\r\t\tkeystroke \"v\" using command down\r\tend tell\rend tell",
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 96,
+          "BTTShortcutModifierKeys" : 0,
+          "BTTOrder" : 2
+        },
+        {
+          "BTTGestureNotes" : "make target window = current window",
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 172,
+          "BTTPredefinedActionName" : "Run Apple Script (enter directly as text)",
+          "BTTInlineAppleScript" : "tell application \"Finder\"\r\t\r\t-- get number of open finder windows\r\tset NumberofFinders to count every Finder window\r\t\r\t-- if number of finder window is not 2, stop\r\tif NumberofFinders is not 2 then\r\t\tdisplay notification \"Please make sure only 2 Finder Windows are opened side-by-side.\"\r\t\treturn\r\tend if\r\t\r\t-- get location of the 2 finder windows\t\r\ttry\r\t\ttell Finder window 1\r\t\t\tset firstLocation to target\r\t\tend tell\r\tend try\r\t\r\t-- make the exchange happen\r\tset the target of Finder window 2 to firstLocation\rend tell\r",
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 24,
+          "BTTShortcutModifierKeys" : 524288,
+          "BTTOrder" : 16
+        },
+        {
+          "BTTGestureNotes" : "swap window L & window R",
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 172,
+          "BTTPredefinedActionName" : "Run Apple Script (enter directly as text)",
+          "BTTInlineAppleScript" : "tell application \"Finder\"\r\t\r\t-- get number of open finder windows\r\tset NumberofFinders to count every Finder window\r\t\r\t-- close all finders except the frontmost one\r\tif NumberofFinders is not 2 then\r\t\tdisplay notification \"Please make sure only 2 Finder Windows are opened side-by-side.\"\r\t\treturn\r\tend if\r\t\r\t-- get location of the 2 finder windows\t\r\ttry\r\t\ttell Finder window 1\r\t\t\tset firstLocation to target\r\t\tend tell\r\t\ttell Finder window 2\r\t\t\tset secondLocation to target\r\t\tend tell\r\tend try\r\t\r\t-- make the exchange happen\r\tset the target of Finder window 1 to secondLocation\r\tset the target of Finder window 2 to firstLocation\rend tell\r",
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 32,
+          "BTTShortcutModifierKeys" : 524288,
+          "BTTOrder" : 15
+        },
+        {
+          "BTTGestureNotes" : "compress",
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 172,
+          "BTTPredefinedActionName" : "Run Apple Script (enter directly as text)",
+          "BTTInlineAppleScript" : "tell application \"Finder\"\r\tactivate\r\t-- get number of open finder windows\r\tset NumberofFinders to count every Finder window\r\t-- if number of finder window is not 2, stop\r\tif NumberofFinders is not 2 then\r\t\tdisplay dialog \"Please make sure only 2 Finder Windows are opened side-by-side.\" buttons {\"OK\"}\r\t\treturn\r\tend if\r\t-- if answer is Yes, continue\rend tell\r\r-- menu command to compress the selection\rtell application \"System Events\"\r\ttell process \"Finder\"\r\t\tset frontmost to true\r\t\ttell menu bar item 3 of menu bar 1\r\t\t\tclick menu item 20 of menu 1\r\t\tend tell\r\tend tell\rend tell\r\r-- select the latest addition in the folder, i.e. the zip file\rtell application \"Finder\"\r\tset latestFile to the last item of (sort (get files of (path to downloads folder)) by creation date) as alias\r\t--set fileName to latestFile's name\r\tset selection to latestFile\rend tell\r\r--move zip file to the other finder window\rtell application \"System Events\"\r\tkeystroke \"c\" using command down\r\tdelay 0.5\r\ttell application \"Finder\" to select the last Finder window\r\tdelay 0.5\r\tkeystroke \"v\" using {command down, option down}\rend tell\r",
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 96,
+          "BTTShortcutModifierKeys" : 524288,
+          "BTTOrder" : 5,
+          "BTTAdditionalActions" : [
+            {
+              "BTTTriggerType" : -1,
+              "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+              "BTTPredefinedActionType" : 172,
+              "BTTPredefinedActionName" : "Run Apple Script (enter directly as text)",
+              "BTTInlineAppleScript" : "display notification \"File(s)\/folder(s) compress action triggered.\"",
+              "BTTEnabled" : 1,
+              "BTTShortcutKeyCode" : -1,
+              "BTTShortcutModifierKeys" : -1,
+              "BTTOrder" : 0
+            }
+          ]
+        },
+        {
+          "BTTGestureNotes" : "make window L = window R",
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 172,
+          "BTTPredefinedActionName" : "Run Apple Script (enter directly as text)",
+          "BTTInlineAppleScript" : "-- Need the localized version of the string \"folder\"\r-- set folderString to \"檔案夾\"\r\rtell application \"Finder\"\r\t-- get number of open finder windows\r\tset NumberofFinders to count every Finder window\r\t\r\t-- if number of finder window is not 2, stop\r\tif NumberofFinders is not 2 then\r\t\tdisplay notification \"Please make sure only 2 Finder Windows are opened side-by-side.\"\r\t\treturn\r\tend if\r\t\r\t-- begin determine the left finder window\r\t\r\t-- get 1st finder window\r\tset firstWindowPosition to (get the position of the first window)\r\t\r\t-- get ID of 2 finder windows\r\tset firstWindowID to (get the id of the first window)\r\tset secondWindowID to (get the id of the second window)\r\t\r\t-- determine if 1st finder window is the window on the left\r\tif item 1 of firstWindowPosition = 0 then\r\t\tset leftWindowID to firstWindowID\r\t\tset rightWindowID to secondWindowID\r\telse\r\t\tset leftWindowID to secondWindowID\r\t\tset rightWindowID to firstWindowID\r\tend if\r\t-- end determine the left finder window\r\t\r\t-- get the target\r\ttry\r\t\tset theRightContainer to target of Finder window id rightWindowID\r\t\tmy changeFolder(leftWindowID, rightWindowID, theRightContainer)\r\ton error\r\t\tset theSelectedItem to the selection as alias\r\t\tmy changeFolder(leftWindowID, rightWindowID, theSelectedItem)\r\tend try\rend tell\r\ron changeFolder(windowToBeChangedID, windowWithTargetID, targetFolder)\r\ttell application \"Finder\"\r\t\ttell Finder window id windowWithTargetID to set tempLocation to targetFolder\r\t\t\r\t\t-- make the change happen\r\t\tset the target of Finder window id windowToBeChangedID to tempLocation\r\tend tell\rend changeFolder",
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 123,
+          "BTTShortcutModifierKeys" : 524288,
+          "BTTOrder" : 14
+        },
+        {
+          "BTTGestureNotes" : "search",
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTShortcutToSend" : "59,96",
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 98,
+          "BTTShortcutModifierKeys" : 131072,
+          "BTTOrder" : 11,
+          "BTTAdditionalActions" : [
+            {
+              "BTTTriggerType" : -1,
+              "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+              "BTTPredefinedActionType" : 172,
+              "BTTPredefinedActionName" : "Run Apple Script (enter directly as text)",
+              "BTTInlineAppleScript" : "display notification \"Finder search field activated.\"",
+              "BTTEnabled" : 1,
+              "BTTShortcutKeyCode" : -1,
+              "BTTShortcutModifierKeys" : -1,
+              "BTTOrder" : 0
+            }
+          ],
+          "BTTTriggerConfig" : {
+            "BTTHUDDetailText" : "Finder search field activated"
+          }
+        },
+        {
+          "BTTGestureNotes" : "trash",
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 172,
+          "BTTPredefinedActionName" : "Run Apple Script (enter directly as text)",
+          "BTTInlineAppleScript" : "tell application \"Finder\"\r\tset selected_items to selection\r\trepeat with x in selected_items\r\t\tdelete x\r\tend repeat\rend tell\r",
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 100,
+          "BTTShortcutModifierKeys" : 0,
+          "BTTOrder" : 10,
+          "BTTAdditionalActions" : [
+            {
+              "BTTTriggerType" : -1,
+              "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+              "BTTPredefinedActionType" : 172,
+              "BTTPredefinedActionName" : "Run Apple Script (enter directly as text)",
+              "BTTInlineAppleScript" : "display notification \"Selected files\/folders sent to Trash.\"",
+              "BTTEnabled" : 1,
+              "BTTShortcutKeyCode" : -1,
+              "BTTShortcutModifierKeys" : -1,
+              "BTTOrder" : 0
+            }
+          ]
+        },
+        {
+          "BTTGestureNotes" : "make window R = window L",
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 172,
+          "BTTPredefinedActionName" : "Run Apple Script (enter directly as text)",
+          "BTTInlineAppleScript" : "-- Need the localized version of the string \"folder\"\r--set folderString to \"檔案夾\"\r\rtell application \"Finder\"\r\t-- get number of open finder windows\r\tset NumberofFinders to count every Finder window\r\t\r\t-- if number of finder window is not 2, stop\r\tif NumberofFinders is not 2 then\r\t\tdisplay notification \"Please make sure only 2 Finder Windows are opened side-by-side.\"\r\t\treturn\r\tend if\r\t\r\t-- begin determine the left finder window\r\t\r\t-- get 1st finder window\r\tset firstWindowPosition to (get the position of the first window)\r\t\r\t-- get ID of 2 finder windows\r\tset firstWindowID to (get the id of the first window)\r\tset secondWindowID to (get the id of the second window)\r\t\r\t-- determine if 1st finder window is the window on the left\r\tif item 1 of firstWindowPosition = 0 then\r\t\tset leftWindowID to firstWindowID\r\t\tset rightWindowID to secondWindowID\r\telse\r\t\tset leftWindowID to secondWindowID\r\t\tset rightWindowID to firstWindowID\r\tend if\r\t-- end determine the left finder window\r\t\r\t-- get the target\r\ttry\r\t\tset theleftContainer to target of Finder window id leftWindowID\r\t\tmy changeFolder(rightWindowID, leftWindowID, theleftContainer)\r\ton error\r\t\tset theSelectedItem to the selection as alias\r\t\tmy changeFolder(rightWindowID, leftWindowID, theSelectedItem)\r\tend try\rend tell\r\ron changeFolder(windowToBeChangedID, windowWithTargetID, targetFolder)\r\ttell application \"Finder\"\r\t\ttell Finder window id windowWithTargetID to set tempLocation to targetFolder\r\t\t\r\t\t-- make the change happen\r\t\tset the target of Finder window id windowToBeChangedID to tempLocation\r\tend tell\rend changeFolder",
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 124,
+          "BTTShortcutModifierKeys" : 524288,
+          "BTTOrder" : 13
+        },
+        {
+          "BTTGestureNotes" : "decompress",
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 172,
+          "BTTPredefinedActionName" : "Run Apple Script (enter directly as text)",
+          "BTTInlineAppleScript" : "tell application \"Finder\"\r\tactivate\r\tset theItems to the selection as alias\r\tset itemPath to POSIX path of theItems\r\tset destFold0 to (target of the second Finder window) as alias\r\tset destFold to POSIX path of destFold0\r\tset itemName to name of theItems\r\tdo shell script (\"\/usr\/bin\/ditto -xk \" & quoted form of itemPath & space & quoted form of destFold)\rend tell",
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 101,
+          "BTTShortcutModifierKeys" : 524288,
+          "BTTOrder" : 6,
+          "BTTAdditionalActions" : [
+            {
+              "BTTTriggerType" : -1,
+              "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+              "BTTPredefinedActionType" : 172,
+              "BTTPredefinedActionName" : "Run Apple Script (enter directly as text)",
+              "BTTInlineAppleScript" : "display notification \"File(s) uncompress action triggered.\"",
+              "BTTEnabled" : 1,
+              "BTTShortcutKeyCode" : -1,
+              "BTTShortcutModifierKeys" : -1,
+              "BTTOrder" : 0
+            }
+          ]
+        },
+        {
+          "BTTGestureNotes" : "edit with textmate",
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 157,
+          "BTTPredefinedActionName" : "Open Current Finder Selection With Specific App",
+          "BTTLaunchPath" : "file:\/\/\/Applications\/TextMate.app",
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 118,
+          "BTTShortcutModifierKeys" : 0,
+          "BTTOrder" : 4
+        },
+        {
+          "BTTGestureNotes" : "open file",
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTShortcutToSend" : "55,31",
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 36,
+          "BTTShortcutModifierKeys" : 0,
+          "BTTOrder" : 1
+        },
+        {
+          "BTTGestureNotes" : "new folder",
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTShortcutToSend" : "56,55,45",
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 98,
+          "BTTShortcutModifierKeys" : 0,
+          "BTTOrder" : 9
+        },
+        {
+          "BTTGestureNotes" : "delete",
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTShortcutToSend" : "58,55,51",
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 100,
+          "BTTShortcutModifierKeys" : 131072,
+          "BTTOrder" : 12,
+          "BTTTriggerConfig" : {
+            "BTTHUDDetailText" : "Selected files\/folders deleted"
+          }
+        },
+        {
+          "BTTGestureNotes" : "Copy file name",
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTShortcutToSend" : "55,8",
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 118,
+          "BTTShortcutModifierKeys" : 131072,
+          "BTTOrder" : 8,
+          "BTTAdditionalActions" : [
+            {
+              "BTTTriggerType" : -1,
+              "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+              "BTTPredefinedActionType" : 129,
+              "BTTPredefinedActionName" : "Delay Next Action",
+              "BTTDelayNextActionBy" : "0.522126",
+              "BTTEnabled" : 1,
+              "BTTShortcutKeyCode" : -1,
+              "BTTShortcutModifierKeys" : -1,
+              "BTTOrder" : 0
+            },
+            {
+              "BTTTriggerType" : -1,
+              "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+              "BTTShortcutToSend" : "58,8",
+              "BTTEnabled" : 1,
+              "BTTShortcutKeyCode" : -1,
+              "BTTShortcutModifierKeys" : -1,
+              "BTTOrder" : 1
+            },
+            {
+              "BTTTriggerType" : -1,
+              "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+              "BTTPredefinedActionType" : 172,
+              "BTTPredefinedActionName" : "Run Apple Script (enter directly as text)",
+              "BTTInlineAppleScript" : "display notification (the clipboard as text) with title \"File\/folder name copied\"",
+              "BTTEnabled" : 1,
+              "BTTShortcutKeyCode" : -1,
+              "BTTShortcutModifierKeys" : -1,
+              "BTTOrder" : 2
+            }
+          ],
+          "BTTTriggerConfig" : {
+            "BTTHUDDetailText" : "File name copied"
+          }
+        },
+        {
+          "BTTGestureNotes" : "move file",
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 172,
+          "BTTPredefinedActionName" : "Run Apple Script (enter directly as text)",
+          "BTTInlineAppleScript" : "tell application \"Finder\"\r\tactivate\r\t-- get number of open finder windows\r\tset NumberofFinders to count every Finder window\r\t-- if number of finder window is not 2, stop\r\tif NumberofFinders is not 2 then\r\t\tdisplay dialog \"Please make sure only 2 Finder Windows are opened side-by-side.\" buttons {\"OK\"}\r\t\treturn\r\tend if\r\t\r\ttell application \"System Events\"\r\t\tkeystroke \"c\" using command down\r\t\tdelay 0.5\r\t\ttell application \"Finder\" to select the last Finder window\r\t\tdelay 0.5\r\t\tkeystroke \"v\" using {command down, option down}\r\tend tell\rend tell",
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 97,
+          "BTTShortcutModifierKeys" : 0,
+          "BTTOrder" : 0
+        }
+      ]
+    },
+    {
+      "BTTAppBundleIdentifier" : "BT.G",
+      "BTTAppName" : "Global",
+      "BTTAppSpecificSettings" : {
+
+      },
+      "BTTTriggers" : [
+        {
+          "BTTGestureNotes" : "Dual Finder Windows",
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 172,
+          "BTTPredefinedActionName" : "Run Apple Script (enter directly as text)",
+          "BTTInlineAppleScript" : "tell application id \"sevs\" to if not (UI elements enabled) is true then set UI elements enabled to true\r\rtell application \"Finder\"\r\t\r\t-- get number of open finder windows\r\tset NumberofFinders to count every Finder window\r\t\r\t-- close all finders except the frontmost two\r\tif NumberofFinders is 0 then\r\t\tmake Finder window\r\t\tmake Finder window\r\t\tset the target of Finder window 1 to home\r\t\tset the target of Finder window 2 to home\r\telse if NumberofFinders is 1 then\r\t\tmake Finder window\r\t\tset t to target of Finder window 2\r\t\tset the target of Finder window 1 to t\r\telse if NumberofFinders is greater than 2 then\r\t\trepeat NumberofFinders - 2 times\r\t\t\tclose last Finder window\r\t\tend repeat\r\tend if\r\t\r\t-- get\/set screen info\r\tset screenWidth to 1400\r\tset screenHeight to 900\r\t\r\t-- move finder and set the size & column view\r\tset the position of the front Finder window to {0, 0}\r\tset the bounds of the front Finder window to {0, 0, screenWidth * 0.5, screenHeight * 0.9}\r\tset the current view of front Finder window to column view\r\tset the sidebar width of front Finder window to 150\r\t\r\t-- position second finder & column view\r\tset the position of second Finder window to {screenWidth * 0.5, 0}\r\tset the bounds of second Finder window to {screenWidth * 0.5, 0, screenWidth, screenHeight * 0.9}\r\tset the current view of second Finder window to column view\r\tset the sidebar width of second Finder window to 100\r\t-- bring the finders to the front\r\tactivate\r\t\rend tell\r",
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 3,
+          "BTTShortcutModifierKeys" : 1966080,
+          "BTTOrder" : 0
+        }
+      ]
+    }
+  ],
+  "BTTPresetSnapAreas" : [
+
+  ]
+}
