@@ -53,6 +53,10 @@ Here are the steps I would do:
 3. Alfred 3 workflow version
 4. Procedure to set up app-less version (w/ Automator & the Service menu)
 
+## Troubleshoot
+
+If you encounter problems with this preset - especially with the "opening 2 finder windows side by side", please try to toggle the setting: Finder preference > General > Open folders in tabs instead of new windows. (thanks to [tosbsas](https://community.folivora.ai/u/tosbsas) @BTT community)
+
 ##Credit
 
 The project is actually a collection of codes (mostly in AppleScript) I found on the Internet, and of course sometimes I modify the codes to fit my needs. I will list the source of codes as much as I can. Here are some of the sources that I can remember:
