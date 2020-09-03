@@ -1,7 +1,7 @@
 # DualFinder
 You don't need an app to have two-pane file management on Mac OS X
 
-##Goal
+## Goal
 
 Make Mac Finder act more like the Total Commander in Windows
 	
@@ -15,7 +15,7 @@ Make Mac Finder act more like the Total Commander in Windows
 
 5. (Ideally) No resident app
 
-##Background
+## Background
 
 1. Total Commander (previously known as Windows Commander) does not have Mac version
 
@@ -29,7 +29,7 @@ Make Mac Finder act more like the Total Commander in Windows
    * Pricy
    * Have another app running in addition to Finder, which is required for "select file" dialog 
 
-##Solution
+## Solution
 
 Use original Finder windows and use one of the following to change
 
@@ -44,7 +44,7 @@ Use original Finder windows and use one of the following to change
     * BetterTouchTool
     * Alfred
 
-##Roadmap
+## Roadmap
 
 Here are the steps I would do:
 
@@ -57,24 +57,24 @@ Here are the steps I would do:
 
 If you encounter problems with this preset - especially with the "opening 2 finder windows side by side", please try to toggle the setting: Finder preference > General > Open folders in tabs instead of new windows. (thanks to [tosbsas](https://community.folivora.ai/u/tosbsas) @BTT community)
 
-##Credit
+## Credit
 
 The project is actually a collection of codes (mostly in AppleScript) I found on the Internet, and of course sometimes I modify the codes to fit my needs. I will list the source of codes as much as I can. Here are some of the sources that I can remember:
 
-###DualFinder
+### DualFinder
 1. Two Finders Side-by-Side https://copiancestral.wordpress.com/2012/03/24/two-finders-side-by-side/
 
-###F4: Edit with TextMate
+### F4: Edit with TextMate
 1. "Open in TextMate" from Leopard Finder - The Pug Automatic https://thepugautomatic.com/2007/10/open-in-textmate-from-leopard-finder/
 
-###Shift-F6: Rename
+### Shift-F6: Rename
 1. 10.4: An AppleScript to do a 'find by name' search - Mac OS X Hints http://hints.macworld.com/article.php?story=20051111034108434
 2. A Strategy for UI Scripting in AppleScript https://n8henrie.com/2013/03/a-strategy-for-ui-scripting-in-applescript/
 
-###Alt-F5: Compress file
+### Alt-F5: Compress file
 1. 10.6: An AppleScript to compress a Finder selection - Mac OS X Hints http://hints.macworld.com/article.php?story=2011030403522197
 
-##Help Needed
+## Help Needed
 
 1. An icon to represent this project
 2. After the "app-less" version is completed, I may work on an installer to automate the process.
